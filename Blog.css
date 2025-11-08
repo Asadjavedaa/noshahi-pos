@@ -1,0 +1,375 @@
+/* ===========================
+   🌿 GLOBAL STYLES
+=========================== */
+:root {
+  --green-main: #0b8a44;
+  --green-light: #13ad5d;
+  --green-bg: #e8f8ed;
+  --text-dark: #222;
+  --text-light: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f9fdf9;
+  color: #222;
+  padding-top: 80px; /* Header ke neeche jagah */
+}
+
+/* ===========================
+   🌿 HEADER (FIXED)
+=========================== */
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--green-main);
+  color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+.main-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: #d4f7d9;
+  border-bottom: 2px solid #a6e3af;
+}
+
+.header-actions .btn {
+  padding: 8px 16px;
+  margin-left: 10px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-outline {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-outline:hover {
+  background: white;
+  color: var(--green-main);
+}
+
+.btn-primary {
+  background: var(--green-light);
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #0e8e4a;
+}
+
+/* ===========================
+   🌿 HERO SECTION
+=========================== */
+.hero-section {
+  background: linear-gradient(135deg, var(--green-main), var(--green-light));
+  color: white;
+  padding: 80px 0;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-text h2 {
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.hero-buttons .btn {
+  margin-right: 10px;
+}
+
+/* ===========================
+   🌿 ABOUT SECTION
+=========================== */
+.about-section {
+  background: var(--green-bg);
+  padding: 80px 0;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: center;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-graphic {
+  flex: 1;
+  text-align: center;
+}
+
+/* ===========================
+   🌿 FEATURES
+=========================== */
+.feature-cards-slider {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.feature-card {
+  flex: 1 1 30%;
+  background: #fff;
+  border: 1px solid #d4e9d9;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--green-light);
+}
+
+.feature-icon {
+  color: var(--green-main);
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* ===========================
+   🌿 BENEFITS
+=========================== */
+.benefits-section {
+  padding: 80px 0;
+}
+
+.benefits-wrap {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.benefits-list ul li {
+  margin-bottom: 10px;
+  color: var(--text-dark);
+}
+
+.benefits-list i {
+  color: var(--green-main);
+  margin-right: 8px;
+}
+
+/* ===========================
+   🌿 WHY CHOOSE
+=========================== */
+.why-choose-section {
+  background: var(--green-bg);
+  padding: 70px 0;
+}
+
+.key-points-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.key-points-grid p i {
+  color: var(--green-main);
+  margin-right: 8px;
+}
+
+/* ===========================
+   🌿 INDUSTRIES
+=========================== */
+.green-bg {
+  background: linear-gradient(180deg, var(--green-main), var(--green-light));
+  color: white;
+  padding: 80px 0;
+}
+
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.industry-item {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.industry-item:hover {
+  background: white;
+  color: var(--green-main);
+}
+
+/* ===========================
+   🌿 FBR COMPLIANCE
+=========================== */
+.fbr-compliance-section {
+  padding: 80px 0;
+  background: #f9fff9;
+}
+
+.compliance-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.compliance-text ul li {
+  margin-bottom: 10px;
+}
+
+.compliance-text i {
+  color: var(--green-main);
+  margin-right: 8px;
+}
+
+/* ===========================
+   🌿 FOOTER
+=========================== */
+.main-footer-detailed {
+  background-color: #0a773c;
+  color: #f2f2f2;
+  padding: 50px 20px 0;
+  margin-top: 40px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.footer-column h3 {
+  color: #aaf0b6;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #13ad5d;
+  padding-bottom: 5px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li a {
+  color: #e9ffe7;
+  text-decoration: none;
+  line-height: 1.8;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #b4f0bc;
+}
+
+.footer-logo-social h2 {
+  color: #fff;
+}
+
+.social-icons a {
+  display: inline-block;
+  color: #b9f2c2;
+  font-size: 1.2rem;
+  margin-right: 12px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
+
+.contact-info p {
+  margin: 6px 0;
+}
+
+.footer-bottom {
+  background-color: #085a30;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #dff7e3;
+}
+
+.footer-bottom .lang-selector {
+  color: #c5f5cd;
+  cursor: pointer;
+}
+
+.footer-bottom .lang-selector:hover {
+  color: #fff;
+}
+
+/* ===========================
+   🌿 RESPONSIVE DESIGN
+=========================== */
+@media (max-width: 900px) {
+  .hero-content,
+  .about-content,
+  .benefits-wrap,
+  .compliance-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
